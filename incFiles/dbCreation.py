@@ -1,19 +1,32 @@
-import pymongo as db
+import pymongo
 
 class db:
-    def __init(self):
+    def __init__(self):
         pass
-    def create_client(db_name, collection_name):
-        myClient = db.MongoClient("mongodb://localhost:8080/")
-        mydb = myClient[db_name]
+    def __init(self, myC, myDbs, myCollection):
+        self.client = myC
+        self.db = myDbs
+        self.collection = myCollection
 
-        print(myClient.list_database_names()) #Print DB Name
+    def create_client(self):
+        myClient = pymongo.MongoClient("127.0.0.1", 27017)
+        mydb = myClient["hana"]
 
-        my_collection = mydb[collection_name] #Create Collection
-        print(mydb.list_collection_names()) #Print Collection Name
+        my_collection = mydb["users"] #Create Collection
+
+        self.client = myClient
+        self.db = mydb
+        self.collection = my_collection
 
     def delete_db(db_name):
         pass
 
     def update_db(db_name):
         pass
+
+    def checkOut(self):
+        pass
+
+    def printDBInfo(self):
+        print("DB Name: " + str(self.client.list_database_names()))
+        print("Collection Name: " + str(self.db.list_collection_names()))

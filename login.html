@@ -3,14 +3,23 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
+  <link rel="stylesheet" type="text/css" href="Design/newAccount.css">
+  <!-- Ajax | Angular | Angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <!-- Bootstrap | Jquery -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <!-- React Platform -->
+  <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 
-* {
-  box-sizing: border-box;
-}
+  <!-- Icon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+<style>
 
 /* style the container */
 .container {
@@ -18,7 +27,7 @@ body {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px 0 30px 0;
-} 
+}
 
 /* style inputs and link buttons */
 input,
@@ -76,7 +85,7 @@ input[type=submit]:hover {
   margin-top: 6px;
 }
 
-/* Clear floats after the columns */
+/* Clear floats after the columns
 .row:after {
   content: "";
   display: table;
@@ -134,14 +143,30 @@ input[type=submit]:hover {
 </style>
 </head>
 <body>
-
-<h2>Responsive Social Login Form</h2>
-<p>Resize the browser window to see the responsive effect. When the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other.</p>
-
+  <header>
+    <!-- Header Start Here -->
+    <header>
+      <div class="menu_menu">
+        <div class="left_menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Pricing Plans</a></li>
+                <li><a href="">Meetup</a></li>
+            </ul>
+        </div>
+        <div class="right_menu">
+          <ul>
+              <li><a href="">Create Room</a></li>
+              <li><a href="">Join Room</a></li>
+              <li><a href="register.html">Create An Account</a></li>
+          </ul>
+        </div>
+      </div>
+  </header>
+  <br /><br />
 <div class="container">
   <form action="/action_page.php">
     <div class="row">
-      <h2 style="text-align:center">Login with Social Media or Manually</h2>
       <div class="vl">
         <span class="vl-innertext">or</span>
       </div>
@@ -167,22 +192,20 @@ input[type=submit]:hover {
         <input type="password" name="password" placeholder="Password" required>
         <input type="submit" value="Login">
       </div>
-      
+
     </div>
+
   </form>
+  <div class="forgot-pass">
+  <a href="#">Forgot password?</a>
 </div>
-
+</div>
+<br /><br />
 <div class="bottom-container">
-  <div class="row">
-    <div class="col">
-      <a href="#" style="color:white" class="btn">Sign up</a>
+      <a href="register.html" class="registerbtn">Create an Account</a>
     </div>
-    <div class="col">
-      <a href="#" style="color:white" class="btn">Forgot password?</a>
-    </div>
-  </div>
-</div>
-
+<footer>
+  Footer
+</footer>
 </body>
 </html>
-

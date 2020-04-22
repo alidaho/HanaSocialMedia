@@ -4,7 +4,7 @@
     <title>Hana</title>
     <meta charset="utf-8"/>
     <!-- CSS | Style -->
-    <link rel="stylesheet" type="text/css" href="Design/newAccount.css">
+    <link rel="stylesheet" type="text/css" href="Design/style.css">
     <!-- Ajax | Angular | Angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <!-- Bootstrap | Jquery -->
@@ -24,46 +24,23 @@
 
   </head>
 
-  <body>
+  <body id="body">
+    <!-- Header Start Here -->
     <header>
-      <!-- Header Start Here -->
-      <header>
-        <div class="menu_menu">
-          <div class="left_menu">
-              <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="">Pricing Plans</a></li>
-                  <li><a href="">Meetup</a></li>
-              </ul>
-          </div>
-          <div class="right_menu">
+      <div class="menu_menu">
+        <div class="left_menu">
             <ul>
-                <li><a href="">Create Room</a></li>
-                <li><a href="">Join Room</a></li>
-                <li><a href="register.html">Create An Account</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Pricing Plans</a></li>
+                <li><a href="">Meetup</a></li>
             </ul>
-          </div>
         </div>
+        <div class="right_menu">
+          <ul>
+              <li><a href="">Create Room</a></li>
+              <li><a href="">Join Room</a></li>
+              <li><a href="register.html">Create An Account</a></li>
+          </ul>
+        </div>
+      </div>
     </header>
-    <div class="content">
-      <form method="post">
-        <div class="container">
-          <h1>Register</h1>
-          <hr>
-          <input type="text" placeholder="Enter Full Name" name="name" required>
-          <input type="text" placeholder="Enter Username" name="username" required>
-          <input type="text" placeholder="Enter Email" name="email" required>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-          <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-          <hr>
-          <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-          <button type="submit" class="registerbtn">Create an Account</button>
-        </div>
-
-        <div class="container signin">
-          <p>Already have an account? <a href="login.html">Sign in</a>.</p>
-        </div>
-      </form>
-    </div>
-  </body>
-  </html>
