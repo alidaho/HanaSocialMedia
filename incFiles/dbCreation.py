@@ -27,6 +27,10 @@ class db:
     def checkOut(self):
         pass
 
+    def return_db(self):
+        db_list = [self.client, self.db, self.collection]
+        return db_list
+
     def printDBInfo(self):
         print("DB Name: " + str(self.client.list_database_names()))
         print("Collection Name: " + str(self.db.list_collection_names()))

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+<!-- Page | Title -->
+{% block title %}
+<<title>Hana | Register</title>
+{% endblock %}
+
+<!-- CSS | Style -->
+{% block csstyle %}
+<link rel="stylesheet" type="text/css" href="register.css">
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+<div class="content">
+  <form method="post">
+    <div class="container">
+      <h1>Register</h1>
+      <hr>
+      <input type="text" placeholder="Enter Full Name" name="name" required>
+      <input type="text" placeholder="Enter Username" name="username" required>
+      <input type="text" placeholder="Enter Email" name="email" required>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      <hr>
+      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+      <button type="submit" class="registerbtn">Create an Account</button>
+    </div>
+
+    <div class="container signin">
+      <p>Already have an account? <a href="login.html">Sign in</a>.</p>
+    </div>
+  </form>
+</div>
+{% endblock %}

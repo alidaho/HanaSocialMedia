@@ -1,9 +1,10 @@
 from userPy import *
 import pandas as pd
 
+
 class AllUsers:
     def get_active(self):
-        pass 
+        pass
 
 class FriendSuggesion:
     def __init_(self):

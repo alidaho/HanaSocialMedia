@@ -43,7 +43,8 @@ class User(db):
 
     def user_exists(self, email, phone, id):
         check = False
-
+        if (email == "" OR phone == "" OR id = 0):
+            check = True
         return check
 
     def email_verification(self):
