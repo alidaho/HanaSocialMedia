@@ -1,7 +1,7 @@
 import pymongo as db
 import random as rn
 from dbCreation import db
-
+from Flask import request
 class User(db):
     def __init__(self, level, name, age, id, pwd, phone, email):
         self.level = level
@@ -52,4 +52,7 @@ class User(db):
         return code
 
     def delete_account(self):
+        pass
+
+    def get_data_from_html():
         pass

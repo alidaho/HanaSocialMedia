@@ -1,0 +1,144 @@
+/* Body Style */
+#body{
+  background-color: #282828;
+}
+
+/* Style the header */
+header {
+  height: 53px;
+  background-color: #333;
+  box-shadow: 1px 1px #5757578c;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px 16px;
+  text-decoration: none;
+
+}
+
+/* Menu's */
+  /* Left Menu */
+.left_menu{
+    float: left;
+    margin-left: 100px;
+}
+  /* Right Menu */
+.right_menu{
+    float: right;
+    margin-right: 100px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* Change the background color on mouse-over */
+header a:hover {
+  background-color: #373737;
+  text-decoration: none;
+  color: white;
+}
+
+/* Style the active/current link*/
+header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+
+/* Slide Shows */
+.showSlide {
+            display: none
+        }
+            .showSlide img {
+                width: 100%;
+            }
+        .slidercontainer {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+        .left, .right {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+        }
+        .right {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+            .left:hover, .right:hover {
+                background-color: rgba(115, 115, 115, 0.8);
+            }
+        .content {
+            color: #eff5d4;
+            font-size: 30px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            text-align: center;
+        }
+        .active {
+            background-color: #717171;
+        }
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }  
