@@ -1,4 +1,4 @@
-import pymongo
+from flask_pymongo import PyMongo
 
 class db:
     def __init__(self):

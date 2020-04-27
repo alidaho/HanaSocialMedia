@@ -1,7 +1,7 @@
 import pymongo as db
 import random as rn
-from dbCreation import db
-from Flask import request
+from incFiles.dbCreation import db
+
 class User(db):
     def __init__(self, level, name, age, id, pwd, phone, email):
         self.level = level
@@ -11,6 +11,9 @@ class User(db):
         self.pwd = pwd
         self.phone = phone
         self.email = email
+
+    def __init__(self):
+        pass
 
     def checkInfo(self):
         if not self.name:
@@ -43,7 +46,7 @@ class User(db):
 
     def user_exists(self, email, phone, id):
         check = False
-        if (email == "" OR phone == "" OR id = 0):
+        if (email == "" or phone == "" or id == 0):
             check = True
         return check
 
@@ -54,5 +57,6 @@ class User(db):
     def delete_account(self):
         pass
 
-    def get_data_from_html():
-        pass
+class GetData:
+    def get_data_from_html(self,data):
+        print(data)

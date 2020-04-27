@@ -2,12 +2,43 @@
 
 <!-- Page | Title -->
 {% block title %}
-<<title>Hana | Login</title>
+<title>Hana | Login</title>
 {% endblock %}
 
 <!-- CSS | Style -->
 {% block csstyle %}
-<link rel="stylesheet" type="text/css" href="login.css">
+<link rel="stylesheet" type="text/css" href="../static/css/index.css">
+<link rel="stylesheet" type="text/css" href="../static/css/login.css">
+
+<script>
+ var googleUser = {};
+ var startApp = function() {
+   gapi.load('auth2', function(){
+     // Retrieve the singleton for the GoogleAuth library and set up the client.
+     auth2 = gapi.auth2.init({
+       client_id: 'YOUR_CLIENT_ID.apps.googleusercontent.com',
+       cookiepolicy: 'single_host_origin',
+       // Request scopes in addition to 'profile' and 'email'
+       //scope: 'additional_scope'
+     });
+     attachSignin(document.getElementById('customBtn'));
+   });
+ };
+
+ function attachSignin(element) {
+   console.log(element.id);
+   auth2.attachClickHandler(element, {},
+       function(googleUser) {
+         document.getElementById('name').innerText = "Signed in: " +
+             googleUser.getBasicProfile().getName();
+       }, function(error) {
+         alert(JSON.stringify(error, undefined, 2));
+       });
+ }
+ </script>
+
+
+
 {% endblock %}
 
 <!-- Content -->
@@ -15,30 +46,28 @@
 <!-- END Content -->
   <br /><br />
 <div class="container">
-  <form action="/action_page.php">
+  <form method="POST" action="/sent">
     <div class="row">
       <div class="vl">
         <span class="vl-innertext">or</span>
       </div>
 
       <div class="col">
-        <a href="#" class="fb btn">
-          <i class="fa fa-facebook fa-fw"></i> Login with Facebook
-         </a>
-        <a href="#" class="twitter btn">
-          <i class="fa fa-twitter fa-fw"></i> Login with Twitter
-        </a>
-        <a href="#" class="google btn"><i class="fa fa-google fa-fw">
-          </i> Login with Google+
-        </a>
+        <div id="gSignInWrapper">
+            <div id="customBtn" class="customGPlusSignIn">
+              <span class="icon"></span>
+              <span class="buttonText">Google</span>
+            </div>
+          </div>
+          <div id="name"></div>
+          <script>startApp();</script>
       </div>
 
       <div class="col">
         <div class="hide-md-lg">
-          <p>Or sign in manually:</p>
+          <p>Sign In</p>
         </div>
-
-        <input type="text" name="username" placeholder="Username" required>
+        <input type="text" name="username" placeholder="Username | Email | Phone Number" required>
         <input type="password" name="password" placeholder="Password" required>
         <input type="submit" value="Login">
       </div>
@@ -49,10 +78,10 @@
   <div class="forgot-pass">
   <a href="#">Forgot password?</a>
 </div>
+<div class="register-bottom">
+      <a href="register" class="registerbtn">Create an Account</a>
+    </div>
 </div>
 <br /><br />
-<div class="bottom-container">
-      <a href="register.html" class="registerbtn">Create an Account</a>
-    </div>
 
 {% endblock %}

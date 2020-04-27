@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+<!-- Page | Title -->
+{% block title %}
+<title>Hana</title>
+{% endblock %}
+
+<!-- CSS | Style -->
+{% block csstyle %}
+<link rel="stylesheet" type="text/css" href="../static/css/index.css">
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+
+<div class="sent">
+  <form method="POST" action="/home">
+    <input type="code" name="code" placeholder="Enter Code"/>
+    <input type="submit" name="check" value="Check"/>
+  </form>
+</div>
+
+{% endblock %}

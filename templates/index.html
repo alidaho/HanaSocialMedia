@@ -19,29 +19,55 @@
 <!-- Content -->
 {% block content %}
 <!-- Slideshow container -->
-<div class="slidercontainer">
-    <div class="showSlide fade">
-        <img src="../static/img/001.jpg" />
-        <div class="content">Slide1 heading</div>
+<div style="clear:both"></div>
+<div class="slides-show">
+  <div class="first-pic">
+    <div class="img">
+      <img src="../static/img/001.jpg" alt="pic" width="1935px" height="600px"/>
+      <h2>Cool things</h2>
+      <a href="#link">Ali Daho</a>
     </div>
-    <div class="showSlide fade">
-        <img src="../static/img/004.jpg" />
-        <div class="content">Slide2 heading</div>
-    </div>
+  </div>
 
-    <div class="showSlide fade">
-        <img src="../static/img/001.jpg" />
-        <div class="content">Slide3 heading</div>
-    </div>
-    <div class="showSlide fade">
-        <img src="../static/img/004.jpg" />
-        <div class="content">Slide4 heading</div>
-    </div>
-    <!-- Navigation arrows -->
-    <a class="left" onclick="nextSlide(-1)">❮</a>
-    <a class="right" onclick="nextSlide(1)">❯</a>
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+    <span class="dot" onclick="currentSlide(8)"></span>
+    <span class="dot" onclick="currentSlide(9)"></span>
+    <span class="dot" onclick="currentSlide(10)"></span>
+  </div>
 </div>
 <!-- End Slideshow -->
+
+<!-- Start Ideas -->
+<div class="idea">
+  <div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="..." alt="...">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>...</p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- ENDIdeas  -->
+
+<!-- Download | IOS | Android -->
+<div class="download">
+  <div class="web">Web</div>
+  <div class="ios">IOS</div>
+  <div class="android">Android</div>
+</div>
+<!-- END Download -->
 
 {% endblock %}
 
