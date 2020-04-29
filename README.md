@@ -1,5 +1,5 @@
 # hana
-Hana Social Media Website
+Hana is Social Media Website
 
 Where you can rank people posts and by doing that the best ten posts / videos / pics. Will be uploaded on the main page of the website, 
 
