@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+<!-- Page | Title -->
+{% block title %}
+<title>Hana</title>
+{% endblock %}
+
+<!-- CSS | Style -->
+{% block csstyle %}
+<link rel="stylesheet" type="text/css" href="../static/css/index.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+{% endblock %}
+
+<!-- Icon -->
+{% block icon %}
+
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+<!-- Slideshow container -->
+<div style="clear:both"></div>
+<div class="slides-show">
+  <div class="first-pic">
+    <div class="img">
+      <img src="../static/img/004.jpg" alt="pic" width="1935px" height="900px" style="margin-top: -14px;"/>
+      <h2>Be Together</h2>
+      <a href="">Ali Daho</a>
+    </div>
+  </div>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+    <span class="dot" onclick="currentSlide(8)"></span>
+    <span class="dot" onclick="currentSlide(9)"></span>
+    <span class="dot" onclick="currentSlide(10)"></span>
+  </div>
+</div>
+<!-- End Slideshow -->
+
+<!-- Download | IOS | Android -->
+<div class="download">
+  <div class="web">Web</div>
+  <div class="ios">IOS</div>
+  <div class="android">Android</div>
+</div>
+<!-- END Download -->
+{% endblock %}
+
+<!-- Calling Slides show | Javascript File -->
+{% block js %}
+<script type="text/javascript" src="../static/js/slidesShow.js"></script>
+{% endblock %}

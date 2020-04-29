@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+<!-- Page | Title -->
+{% block title %}
+<title>Hana | Login</title>
+{% endblock %}
+
+<!-- CSS | Style -->
+{% block csstyle %}
+<link rel="stylesheet" type="text/css" href="../static/css/index.css">
+<link rel="stylesheet" type="text/css" href="../static/css/login.css">
+
+<script>
+ var googleUser = {};
+ var startApp = function() {
+   gapi.load('auth2', function(){
+     // Retrieve the singleton for the GoogleAuth library and set up the client.
+     auth2 = gapi.auth2.init({
+       client_id: 'YOUR_CLIENT_ID.apps.googleusercontent.com',
+       cookiepolicy: 'single_host_origin',
+       // Request scopes in addition to 'profile' and 'email'
+       //scope: 'additional_scope'
+     });
+     attachSignin(document.getElementById('customBtn'));
+   });
+ };
+
+ function attachSignin(element) {
+   console.log(element.id);
+   auth2.attachClickHandler(element, {},
+       function(googleUser) {
+         document.getElementById('name').innerText = "Signed in: " +
+             googleUser.getBasicProfile().getName();
+       }, function(error) {
+         alert(JSON.stringify(error, undefined, 2));
+       });
+ }
+ </script>
+
+
+
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+<!-- END Content -->
+  <br /><br />
+<div class="container">
+  <form method="POST" action="/sent">
+    <div class="row">
+      <div class="vl">
+        <span class="vl-innertext">or</span>
+      </div>
+
+      <div class="col">
+        <div id="gSignInWrapper">
+            <div id="customBtn" class="customGPlusSignIn">
+              <span class="icon"></span>
+              <span class="buttonText">Google</span>
+            </div>
+          </div>
+          <div id="name"></div>
+          <script>startApp();</script>
+      </div>
+
+      <div class="col">
+        <div class="hide-md-lg">
+          <p>Sign In</p>
+        </div>
+        <input type="text" name="email" placeholder="Username | Email | Phone Number" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="Login">
+      </div>
+
+    </div>
+
+  </form>
+  <div class="forgot-pass">
+  <a href="#">Forgot password?</a>
+</div>
+<div class="register-bottom">
+      <a href="register" class="registerbtn">Create an Account</a>
+    </div>
+</div>
+<br /><br />
+
+{% endblock %}
